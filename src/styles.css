@@ -1,0 +1,93 @@
+body {
+  font-family: sans-serif;
+}
+
+.Form {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input {
+  position: relative;
+  width: 250px;
+}
+
+.input__field {
+  font-size: 1rem;
+  padding: 0.5rem 0.7rem;
+  width: 90%;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+  box-shadow: 0 1rem 2rem #cccccc;
+}
+
+.error {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.error .error-icon {
+  color: #ff7730;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  display: block;
+  align-items: right;
+}
+
+.error .fa {
+  position: absolute;
+  top: 1px;
+  right: 5px;
+}
+
+.error-text {
+  background-color: #ff7730;
+  color: #fff;
+  font-size: 0.78rem;
+  border-radius: 6px;
+  width: 200px;
+  position: absolute;
+}
+
+.error-text-bottom {
+  top: 35px;
+  right: 5px;
+}
+
+.error-text-top {
+  top: -60px;
+  right: 5px;
+}
+
+.error-text ul {
+  padding-inline-start: 0px;
+  text-align: center;
+  list-style: none;
+}
+
+.input__field:focus {
+  outline: none;
+  border-bottom: 3px solid #55c57a;
+}
+
+.input__field:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.input__field:focus:invalid + .error {
+  opacity: 1;
+  z-index: 1;
+}
+
+.input:not(:last-child) {
+  margin-bottom: 20px;
+}
